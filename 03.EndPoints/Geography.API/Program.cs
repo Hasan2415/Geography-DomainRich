@@ -1,15 +1,24 @@
+using Geography.ApplicationServices.Provinces;
+using Geography.Domain.Provinces.Contracts;
+using Geography.SqlServer;
+using Geography.SqlServer.Provinces;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<AddProvinceHandler, AddProvinceCommandHandler>();
+builder.Services.AddScoped<ProvinceRepository, EFProvinceRepository>();
+builder.Services.AddDbContext<EFDataContext>(option =>
+{
+    option.UseSqlServer(builder.Configuration.GetConnectionString("dbConnectionString"));
+});
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
