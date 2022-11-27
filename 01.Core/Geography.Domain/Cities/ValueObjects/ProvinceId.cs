@@ -10,4 +10,6 @@ public class ProvinceId
     {
         _value = value;
     }
+
+    public static implicit operator int(ProvinceId provinceId) => provinceId._value;
 }

@@ -17,7 +17,9 @@ builder.Services.AddScoped<AddProvinceHandler, AddProvinceCommandHandler>();
 builder.Services.AddScoped<ProvinceRepository, EFProvinceRepository>();
 builder.Services.AddScoped<ProvinceQueryRepository, EFProvinceQueryRepository>();
 builder.Services.AddScoped<AddCityHandler, AddCityCommandHandler>();
-builder.Services.AddScoped<CityRepository,EFCityRepository>();
+builder.Services.AddScoped<CityRepository, EFCityRepository>();
+builder.Services.AddScoped<CityQueryRepository, EFCityQueryRepository>();
+
 builder.Services.AddDbContext<EFDataContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("dbConnectionString"));
