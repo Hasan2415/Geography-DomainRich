@@ -22,4 +22,15 @@ public class EFProvinceQueryRepository : ProvinceQueryRepository
                 Name = _.Name
             }).ToListAsync();
     }
+
+    public async Task<GetProvinceDetailsDto?> GetDetails(int id)
+    {
+        return await _context.Provinces
+            .Where(_ => _.Id == id)
+            .Select(_ => new GetProvinceDetailsDto
+            {
+                Id = _.Id,
+                Name = _.Name
+            }).SingleOrDefaultAsync();
+    }
 }
