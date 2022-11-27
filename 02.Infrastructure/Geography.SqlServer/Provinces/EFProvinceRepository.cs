@@ -18,9 +18,15 @@ public class EFProvinceRepository : ProvinceRepository
         _context.Provinces.Add(province);
     }
 
-    public async Task<bool> IsExistProvinceName(string name)
+    public async Task<bool> IsExist(string name)
     {
         return await _context.Provinces
             .AnyAsync(_ => _.Name == name);
+    }
+
+    public async Task<bool> IsExist(int id)
+    {
+        return await _context.Provinces
+            .AnyAsync(_ => _.Id == id);
     }
 }

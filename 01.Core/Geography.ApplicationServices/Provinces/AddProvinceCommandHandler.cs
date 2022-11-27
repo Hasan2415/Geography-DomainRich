@@ -25,7 +25,7 @@ public class AddProvinceCommandHandler : AddProvinceHandler
 
     private async Task StopIfProvinceNameIsExist(AddProvinceDto dto)
     {
-        if (await _repository.IsExistProvinceName(dto.Name))
+        if (await _repository.IsExist(dto.Name))
         {
             throw new InvalidOperationException("این استان قبلا ثبت شده است");
         }
