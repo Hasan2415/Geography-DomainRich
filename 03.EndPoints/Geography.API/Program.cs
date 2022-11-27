@@ -1,6 +1,9 @@
+using Geography.ApplicationServices.Cities;
 using Geography.ApplicationServices.Provinces;
+using Geography.Domain.Cities.Contracts;
 using Geography.Domain.Provinces.Contracts;
 using Geography.SqlServer;
+using Geography.SqlServer.Cities;
 using Geography.SqlServer.Provinces;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,6 +16,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<AddProvinceHandler, AddProvinceCommandHandler>();
 builder.Services.AddScoped<ProvinceRepository, EFProvinceRepository>();
 builder.Services.AddScoped<ProvinceQueryRepository, EFProvinceQueryRepository>();
+builder.Services.AddScoped<AddCityHandler, AddCityCommandHandler>();
+builder.Services.AddScoped<CityRepository,EFCityRepository>();
 builder.Services.AddDbContext<EFDataContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("dbConnectionString"));
