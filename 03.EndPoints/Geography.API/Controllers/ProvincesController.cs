@@ -8,11 +8,24 @@ namespace Geography.API.Controllers;
 [Route("[controller]")]
 public class ProvincesController : ControllerBase
 {
+    private readonly ProvinceQueryRepository _provinceQueryRepository;
+
+    public ProvincesController(ProvinceQueryRepository provinceQueryRepository)
+    {
+        _provinceQueryRepository = provinceQueryRepository;
+    }
+
     [HttpPost]
     public async Task Add(
         [FromBody] AddProvinceDto dto,
         [FromServices] AddProvinceHandler handler)
     {
         await handler.Handle(dto);
+    }
+
+    [HttpGet]
+    public async Task<List<GetAllProvinceDto>> GetAll()
+    {
+        return await _provinceQueryRepository.GetAll();
     }
 }

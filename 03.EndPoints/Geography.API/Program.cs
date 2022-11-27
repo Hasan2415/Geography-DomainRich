@@ -12,6 +12,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<AddProvinceHandler, AddProvinceCommandHandler>();
 builder.Services.AddScoped<ProvinceRepository, EFProvinceRepository>();
+builder.Services.AddScoped<ProvinceQueryRepository, EFProvinceQueryRepository>();
 builder.Services.AddDbContext<EFDataContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("dbConnectionString"));
