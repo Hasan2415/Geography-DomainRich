@@ -28,4 +28,10 @@ public class ProvincesController : ControllerBase
     {
         return await _provinceQueryRepository.GetAll();
     }
+
+    [HttpGet("{id}/details")]
+    public async Task<GetProvinceDetailsDto?> GetDetails(int id)
+    {
+        return await _provinceQueryRepository.GetDetails(id);
+    }
 }
