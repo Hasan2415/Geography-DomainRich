@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Core", "01.Core", "{C67F28A3-CF7B-4111-A1BF-F5C6F4E6DBF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Infrastructure", "02.Infrastructure", "{688A65AA-AE4B-437E-BCF9-3B6BFA25A72D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.EndPoints", "03.EndPoints", "{80B7DD7E-96D1-418F-AF63-79456348398C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geography.Domain", "01.Core\Geography.Domain\Geography.Domain.csproj", "{A397EC39-2C96-443D-A544-2B2C09DA1310}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geography.ApplicationServices", "01.Core\Geography.ApplicationServices\Geography.ApplicationServices.csproj", "{0ABD8DED-7D46-4C26-A6F2-4420FACCF6D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geography.API", "03.EndPoints\Geography.API\Geography.API.csproj", "{2DDEE94A-E25A-4369-9293-0E3F357018EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geography.SqlServer", "02.Infrastructure\Geography.SqlServer\Geography.SqlServer.csproj", "{6A4FE9AE-8414-4724-BC67-827D9D0169E1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A397EC39-2C96-443D-A544-2B2C09DA1310} = {C67F28A3-CF7B-4111-A1BF-F5C6F4E6DBF4}
+		{0ABD8DED-7D46-4C26-A6F2-4420FACCF6D9} = {C67F28A3-CF7B-4111-A1BF-F5C6F4E6DBF4}
+		{2DDEE94A-E25A-4369-9293-0E3F357018EC} = {80B7DD7E-96D1-418F-AF63-79456348398C}
+		{6A4FE9AE-8414-4724-BC67-827D9D0169E1} = {688A65AA-AE4B-437E-BCF9-3B6BFA25A72D}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A397EC39-2C96-443D-A544-2B2C09DA1310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A397EC39-2C96-443D-A544-2B2C09DA1310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A397EC39-2C96-443D-A544-2B2C09DA1310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A397EC39-2C96-443D-A544-2B2C09DA1310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ABD8DED-7D46-4C26-A6F2-4420FACCF6D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ABD8DED-7D46-4C26-A6F2-4420FACCF6D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ABD8DED-7D46-4C26-A6F2-4420FACCF6D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ABD8DED-7D46-4C26-A6F2-4420FACCF6D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DDEE94A-E25A-4369-9293-0E3F357018EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DDEE94A-E25A-4369-9293-0E3F357018EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DDEE94A-E25A-4369-9293-0E3F357018EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DDEE94A-E25A-4369-9293-0E3F357018EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A4FE9AE-8414-4724-BC67-827D9D0169E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A4FE9AE-8414-4724-BC67-827D9D0169E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A4FE9AE-8414-4724-BC67-827D9D0169E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A4FE9AE-8414-4724-BC67-827D9D0169E1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
