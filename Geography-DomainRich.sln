@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geography.API", "03.EndPoin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geography.SqlServer", "02.Infrastructure\Geography.SqlServer\Geography.SqlServer.csproj", "{6A4FE9AE-8414-4724-BC67-827D9D0169E1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Frameworks", "00.Frameworks", "{67924CB7-D0C9-4EB3-BB6E-6AF3D6C13DC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Data", "00.Frameworks\Framework.Data\Framework.Data.csproj", "{9FA41A16-5B06-40D1-92BD-4E38296600FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +28,7 @@ Global
 		{0ABD8DED-7D46-4C26-A6F2-4420FACCF6D9} = {C67F28A3-CF7B-4111-A1BF-F5C6F4E6DBF4}
 		{2DDEE94A-E25A-4369-9293-0E3F357018EC} = {80B7DD7E-96D1-418F-AF63-79456348398C}
 		{6A4FE9AE-8414-4724-BC67-827D9D0169E1} = {688A65AA-AE4B-437E-BCF9-3B6BFA25A72D}
+		{9FA41A16-5B06-40D1-92BD-4E38296600FB} = {67924CB7-D0C9-4EB3-BB6E-6AF3D6C13DC1}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A397EC39-2C96-443D-A544-2B2C09DA1310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +47,9 @@ Global
 		{6A4FE9AE-8414-4724-BC67-827D9D0169E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A4FE9AE-8414-4724-BC67-827D9D0169E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A4FE9AE-8414-4724-BC67-827D9D0169E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FA41A16-5B06-40D1-92BD-4E38296600FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FA41A16-5B06-40D1-92BD-4E38296600FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FA41A16-5B06-40D1-92BD-4E38296600FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FA41A16-5B06-40D1-92BD-4E38296600FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

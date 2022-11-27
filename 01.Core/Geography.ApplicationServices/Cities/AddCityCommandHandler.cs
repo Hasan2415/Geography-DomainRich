@@ -1,3 +1,4 @@
+using Framework.Data;
 using Geography.Domain.Cities.Contracts;
 using Geography.Domain.Cities.Dtos;
 using Geography.Domain.Cities.Entities;
@@ -10,13 +11,16 @@ public class AddCityCommandHandler : AddCityHandler
 {
     private readonly CityRepository _repository;
     private readonly ProvinceRepository _provinceRepository;
+    private readonly UnitOfWork _unitOfWork;
 
     public AddCityCommandHandler(
         CityRepository repository,
-        ProvinceRepository provinceRepository)
+        ProvinceRepository provinceRepository,
+        UnitOfWork unitOfWork)
     {
         _repository = repository;
         _provinceRepository = provinceRepository;
+        _unitOfWork = unitOfWork;
     }
 
     public async Task Handle(AddCityDto dto)
@@ -30,6 +34,7 @@ public class AddCityCommandHandler : AddCityHandler
         );
 
         _repository.Add(city);
+        await _unitOfWork.Complete();
     }
 
     private async Task StopIfProvinceNotExist(AddCityDto dto)

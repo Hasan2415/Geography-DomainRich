@@ -1,3 +1,4 @@
+using Framework.Data;
 using Geography.ApplicationServices.Cities;
 using Geography.ApplicationServices.Provinces;
 using Geography.Domain.Cities.Contracts;
@@ -19,6 +20,7 @@ builder.Services.AddScoped<ProvinceQueryRepository, EFProvinceQueryRepository>()
 builder.Services.AddScoped<AddCityHandler, AddCityCommandHandler>();
 builder.Services.AddScoped<CityRepository, EFCityRepository>();
 builder.Services.AddScoped<CityQueryRepository, EFCityQueryRepository>();
+builder.Services.AddScoped<UnitOfWork, EFUnitOfWork>();
 
 builder.Services.AddDbContext<EFDataContext>(option =>
 {
